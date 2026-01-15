@@ -1,10 +1,12 @@
 <p align="center">
-  <img src="docs/assets/Roaya_VL_logo.png" width="260" alt="Roa’ya-VL logo">
+  <img
+    src="https://github.com/yakoubbazi/Roaya-VL/blob/main/docs/assets/Roaya_VL_logo.png?raw=1"
+    alt="Roa’ya-VL logo"
+    width="320"
+  />
 </p>
 
-
-<h2 align="center"><span style="color:#15803d;">النموذج اللغوي البصري رؤيا</span></h2>
-
+<h2 align="center">النموذج اللغوي البصري: رؤيا</h2>
 
 
 <h1 align="center">
