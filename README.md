@@ -1,9 +1,6 @@
 <p align="center">
-  <img src="./docs/assets/Roaya_VL_logo_w256.png" alt="Roa’ya-VL logo" width="256">
+  <img src="./docs/assets/Roaya_VL_logo_w512.png" alt="Roa’ya-VL logo" width="512">
 </p>
-
-
-
 
 <h2 align="center">النموذج اللغوي البصري: رؤيا</h2>
 
