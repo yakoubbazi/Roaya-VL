@@ -3,7 +3,7 @@
 </p>
 
 
-<p align="center" style="margin-top:-8px; font-size:100px;">
+<p align="center" style="margin-top:-8px; font-size:500px;">
   <b>رؤيا</b>
 </p>
 
