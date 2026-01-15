@@ -1,6 +1,7 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/yakoubbazi/Roaya-VL/main/docs/assets/Roaya_VL_logo.png" alt="Roa’ya-VL logo" width="240">
+  <img src="https://yakoubbazi.github.io/Roaya-VL/assets/Roaya_VL_logo.png" alt="Roa’ya-VL logo" width="260">
 </p>
+
 
 <p align="center" style="margin-top:-8px; font-size:100px;">
   <b>رؤيا</b>
