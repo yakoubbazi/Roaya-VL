@@ -153,5 +153,6 @@ li{margin:6px 0}
 /* Mobile */
 @media(max-width:700px){
   h1{font-size:28px}
-  .logo{height:70px}
+  .logo{height:95px}
 }
+
