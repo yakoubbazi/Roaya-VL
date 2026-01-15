@@ -1,9 +1,5 @@
 <p align="center">
-  <img
-    src="https://raw.githubusercontent.com/yakoubbazi/Roaya-VL/main/docs/assets/Roaya_VL_logo.png"
-    width="220"
-    alt="Roa’ya-VL logo"
-  />
+  <img src="docs/assets/Roaya_VL_logo.png" width="220" alt="Roa’ya-VL logo">
 </p>
 
 
