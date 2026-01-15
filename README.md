@@ -51,8 +51,7 @@
 Work in progress. No SOTA claims.
 
 ### What is Roa’ya-VL-3B?
-Roa’ya-VL-3B is a bilingual Arabic–English vision–language model that studies whether **compression-first visual tokenization**
-(inspired by OCR-style encoders) can generalize beyond OCR to broader VLM tasks under a strict visual token budget.
+We introduce Roa’ya-VL-3B, a bilingual Arabic–English VLM built to evaluate whether compression-first OCR-style vision encoders can generalize to broader VLM tasks with a fixed visual token budget. The model combines a token-efficient vision encoder (DeepSeek-OCR–inspired) with Qwen2.5-VL-3B, supporting 256-token (1024²), 400-token (1280²), and tiled document settings (up to 9×400 tokens). Trained on an 18.5M open instruction mixture (incl. 1.5M Arabic), we track intermediate validation on OCR/document (OCRBench, DocVQA) and general benchmarks (MMBench). We will release weights, code, and configs.
 
 **Tokenization regimes**
 - **Base:** 1024×1024 → **256** visual tokens  
