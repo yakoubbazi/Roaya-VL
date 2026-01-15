@@ -1,3 +1,77 @@
+:root{
+  --w: 980px;
+  --fg:#0b1020;
+  --mut:#4b5563;
+  --bd:#e5e7eb;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font:16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  color:var(--fg);
+  background:#fff;
+}
+
+.wrap{
+  max-width:var(--w);
+  margin:0 auto;
+  padding:36px 22px 60px;
+}
+
+/* Headings */
+h1{
+  font-size:36px;
+  line-height:1.12;
+  margin:10px auto 10px;
+  letter-spacing:-0.02em;
+  max-width:880px;
+}
+h2{
+  margin:26px 0 10px;
+  font-size:22px;
+}
+p{margin:10px 0}
+
+/* Gradient word */
+.grad{
+  background:linear-gradient(90deg,#ff4aa2,#4c7dff);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+/* Top logo */
+.topbar{
+  display:flex;
+  justify-content:center;
+  margin:10px 0 18px;
+}
+.logo{
+  height:90px;
+  width:auto;
+}
+
+/* Subtitle + authors */
+.sub{color:var(--mut);margin:0 0 14px}
+.authors{
+  margin:6px 0 10px;
+  color:var(--fg);
+}
+.aff{
+  color:var(--mut);
+  font-size:14px;
+}
+
+/* Center only header area */
+.topbar, h1, .sub, .authors, .badges{
+  text-align:center;
+}
+
+/* Readability: content sections left */
+h2, p, ul, .note{
+  text-align:left;
+}
+
 /* Buttons */
 .badges{
   display:flex;
@@ -61,4 +135,23 @@
 .badges .btn:nth-child(3):hover{
   background:#e5e7eb;
   border-color:#d1d5db;
+}
+
+/* Status box */
+.note{
+  border:1px solid var(--bd);
+  background:#f8fafc;
+  padding:12px 14px;
+  border-radius:14px;
+  margin:14px 0 0;
+}
+
+/* Lists */
+ul{margin:10px 0 0 18px}
+li{margin:6px 0}
+
+/* Mobile */
+@media(max-width:700px){
+  h1{font-size:28px}
+  .logo{height:70px}
 }
