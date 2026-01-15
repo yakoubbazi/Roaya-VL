@@ -11,9 +11,23 @@
 </h1>
 
 <p align="center">
-  <b>Yakoub Bazi</b><sup>1</sup> · <b>Mansour Zuair</b><sup>1</sup> · <b>Mohamad Mahmoud Al Rahhal</b><sup>2</sup><br/>
-  <sup>1</sup>King Saud University · <sup>2</sup>King Saud University
+  <b>Yakoub Bazi</b><sup>1</sup> ·
+  <b>Mansour Zuair</b><sup>1</sup> ·
+  <b>Mohamad Mahmoud Al Rahhal</b><sup>2</sup>
 </p>
+
+<p align="center" style="color:#4b5563; font-size:14px; line-height:1.5; margin-top:-6px;">
+  <sup>1</sup>Computer Engineering Department, College of Computer and Information Sciences, King Saud University, Riyadh 11543, Saudi Arabia<br/>
+  <span style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;">
+    {ybazi, zuair}@ksu.edu.sa
+  </span>
+  <br/><br/>
+  <sup>2</sup>Applied Computer Science Department, College of Applied Computer Science, King Saud University, Riyadh 11543, Saudi Arabia<br/>
+  <span style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;">
+    malrahhal@ksu.edu.sa
+  </span>
+</p>
+
 
 <p align="center">
   <a href="#" target="_blank">
