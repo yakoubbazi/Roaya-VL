@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="PASTE_THE_RAW_URL_HERE" alt="Roa’ya-VL logo" width="220" />
+
+![Roa’ya-VL logo](docs/assets/Roaya_VL_logo.png)
+
 </p>
 
 
