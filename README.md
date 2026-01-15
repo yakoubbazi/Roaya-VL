@@ -33,4 +33,34 @@
 ---
 
 ### 🔥 Status
-Wo
+Work in progress. No SOTA claims.
+
+### What is Roa’ya-VL-3B?
+Roa’ya-VL-3B is a bilingual Arabic–English vision–language model that studies whether **compression-first visual tokenization**
+(inspired by OCR-style encoders) can generalize beyond OCR to broader VLM tasks under a strict visual token budget.
+
+**Tokenization regimes**
+- **Base:** 1024×1024 → **256** visual tokens  
+- **Large:** 1280×1280 → **400** visual tokens  
+- **Tiling:** up to **9×400** tokens for document-scale inputs / multi-image
+
+### Resources
+- **Project page:** https://yakoubbazi.github.io/Roaya-VL/
+- **Code:** https://github.com/yakoubbazi/Roaya-VL
+- **Paper:** soon
+- **Models:** soon
+
+### Roadmap
+- [ ] Teaser examples (Arabic OCR / DocVQA / VQA / multi-image)
+- [ ] Results table + training trajectory plot
+- [ ] Reproducibility checklist (scripts + configs)
+- [ ] Public release (weights + code + evaluation)
+
+### Citation
+```bibtex
+@article{bazi2025roaya,
+  title   = {Roa'ya-VL-3B: Compression-First Visual Tokenization for Arabic--English VLMs},
+  author  = {Bazi, Yakoub and Zuair, Mansour and Al Rahhal, Mohamad Mahmoud},
+  journal = {arXiv preprint arXiv:XXXX.XXXXX},
+  year    = {2025}
+}
