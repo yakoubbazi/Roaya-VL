@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="./docs/assets/Roaya_VL_logo.png" alt="Roa’ya-VL logo" width="220" />
+  <img src="PASTE_THE_RAW_URL_HERE" alt="Roa’ya-VL logo" width="220" />
 </p>
 
 
-<p align="center" style="margin-top:-8px; font-size:28px;">
+<p align="center" style="margin-top:-8px; font-size:40px;">
   <b>رؤيا</b>
 </p>
 
