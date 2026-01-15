@@ -1,7 +1,4 @@
-<p align="center">
-  <img src="docs/assets/Roaya_VL_logo.png" alt="Roa’ya-VL logo" width="260" />
-</p>
-
+![Roa’ya-VL logo](docs/assets/Roaya_VL_logo.png)
 
 
 <p align="center" style="margin-top:-8px; font-size:100px;">
