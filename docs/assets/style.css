@@ -3,6 +3,10 @@
   --fg:#0b1020;
   --mut:#4b5563;
   --bd:#e5e7eb;
+
+  /* Button theme */
+  --blue:#2563eb;
+  --blueHover:#1d4ed8;
 }
 
 *{box-sizing:border-box}
@@ -44,10 +48,10 @@ p{margin:10px 0}
   display:flex;
   justify-content:center;
   margin-top:6px;
-  margin-bottom:10px;
+  margin-bottom:14px;
 }
 .logo{
-  height:54px;          /* adjust if needed */
+  height:clamp(70px, 10vw, 130px); /* responsive bigger logo */
   width:auto;
 }
 
@@ -69,15 +73,29 @@ p{margin:10px 0}
   flex-wrap:wrap;
   margin:14px 0 10px;
 }
+
 .btn{
-  border:1px solid var(--bd);
   padding:10px 14px;
   border-radius:12px;
   text-decoration:none;
-  color:var(--fg);
-  background:#fff;
+  font-weight:600;
+
+  background:var(--blue);
+  color:#ffffff;
+  border:1px solid var(--blue);
+
+  box-shadow:0 6px 16px rgba(37, 99, 235, 0.18);
+  transition:transform 0.05s ease, background 0.15s ease, border-color 0.15s ease;
 }
-.btn:hover{background:#f8fafc}
+
+.btn:hover{
+  background:var(--blueHover);
+  border-color:var(--blueHover);
+}
+
+.btn:active{
+  transform:translateY(1px);
+}
 
 /* Status box */
 .note{
@@ -95,5 +113,4 @@ li{margin:6px 0}
 /* Mobile */
 @media(max-width:700px){
   h1{font-size:30px}
-  .logo{height:46px}
 }
