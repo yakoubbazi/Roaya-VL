@@ -4,65 +4,39 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Roa’ya-VL-3B</title>
-
-  <!-- Cache-buster to force newest CSS -->
   <link rel="stylesheet" href="assets/style.css?v=3"/>
 </head>
-
 <body>
   <div class="wrap">
-
-    <!-- Logo -->
     <div class="topbar">
       <img class="logo" src="assets/roaya_logo.png" alt="Roa’ya logo">
     </div>
 
-    <!-- Title -->
     <h1><span class="grad">Roa’ya-VL-3B</span>: Compression-First Visual Tokenization for Arabic–English VLMs</h1>
 
-    <!-- Authors -->
     <p class="authors">
       <b>Yakoub Bazi</b><sup>1</sup> · <b>Mansour Zuair</b><sup>1</sup> · <b>Mohamad Mahmoud Al Rahhal</b><sup>2</sup><br/>
       <span class="aff">
-        <sup>1</sup>Computer Engineering Dept., College of Computer and Information Sciences, King Saud University, Riyadh, Saudi Arabia ·
-        <sup>2</sup>Applied Computer Science Dept., College of Applied Computer Science, King Saud University, Riyadh, Saudi Arabia
+        <sup>1</sup>King Saud University · <sup>2</sup>King Saud University
       </span>
     </p>
 
-    <!-- Buttons -->
     <div class="badges">
       <a class="btn" href="#" target="_blank" rel="noopener">Paper (soon)</a>
       <a class="btn" href="https://github.com/yakoubbazi/Roaya-VL" target="_blank" rel="noopener">Code</a>
       <a class="btn" href="#" target="_blank" rel="noopener">Hugging Face (soon)</a>
     </div>
 
-    <!-- Status box -->
     <div class="note">
-      <b>Status:</b> Work in progress. Reporting interim validation results at Stage-2 (~12k) due to temporary compute downtime.
-      No SOTA claims. This page will be updated with new checkpoints, logs, and releases.
+      <b>Status:</b> Updated build test ✅ (if you see this, deployment is working).
+      Work in progress. Reporting interim validation results at Stage-2 (~12k). No SOTA claims.
     </div>
 
-    <!-- Abstract -->
     <h2>Abstract</h2>
     <p>
       We present Roa’ya-VL-3B, a bilingual Arabic–English vision–language model designed to investigate whether
-      compression-first visual encoders, originally developed for document OCR, can serve as general-purpose
-      visual front-ends under a strictly controlled visual token budget. Motivated by DeepSeek-OCR, Roa’ya-VL-3B
-      integrates a token-efficient vision encoder with a Qwen2.5-VL-3B language backbone, supporting multiple
-      visual tokenization regimes: 1024×1024→256 tokens, 1280×1280→400 tokens, and dynamic tiling up to 9×400 tokens.
-      The model is trained on an open mixture of 18.5M image–text instruction samples, combining FineVision-scale
-      data with 1.5M Arabic-centric visual instruction examples. Rather than targeting state-of-the-art performance,
-      we focus on transparent analysis of behavior, limitations, and generalization beyond OCR tasks, with step-wise
-      validation tracking across training.
+      compression-first visual encoders can serve as general-purpose visual front-ends under a strict visual token budget...
     </p>
-
-    <h2>Coming next</h2>
-    <ul>
-      <li>Teaser examples (Arabic OCR, DocVQA, general VQA, multi-image)</li>
-      <li>Results table + training trajectory plot</li>
-      <li>Reproducibility checklist (scripts + configs)</li>
-    </ul>
-
   </div>
 </body>
 </html>
