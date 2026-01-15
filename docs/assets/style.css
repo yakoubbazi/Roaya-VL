@@ -1,116 +1,64 @@
-:root{
-  --w: 980px;
-  --fg:#0b1020;
-  --mut:#4b5563;
-  --bd:#e5e7eb;
-
-  /* Button theme */
-  --blue:#2563eb;
-  --blueHover:#1d4ed8;
-}
-
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font:16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, Arial;
-  color:var(--fg);
-  background:#fff;
-}
-
-.wrap{
-  max-width:var(--w);
-  margin:0 auto;
-  padding:28px 22px 60px;
-}
-
-/* Headings */
-h1{
-  font-size:36px;
-  line-height:1.12;
-  margin:10px 0 10px;
-  letter-spacing:-0.02em;
-}
-h2{
-  margin:26px 0 10px;
-  font-size:22px;
-}
-p{margin:10px 0}
-
-/* Gradient word */
-.grad{
-  background:linear-gradient(90deg,#ff4aa2,#4c7dff);
-  -webkit-background-clip:text;
-  color:transparent;
-}
-
-/* Top logo */
-.topbar{
-  display:flex;
-  justify-content:center;
-  margin-top:6px;
-  margin-bottom:14px;
-}
-.logo{
-  height:clamp(70px, 10vw, 130px); /* responsive bigger logo */
-  width:auto;
-}
-
-/* Subtitle + authors */
-.sub{color:var(--mut);margin:0 0 14px}
-.authors{
-  margin:6px 0 10px;
-  color:var(--fg);
-}
-.aff{
-  color:var(--mut);
-  font-size:14px;
-}
-
 /* Buttons */
 .badges{
   display:flex;
-  gap:10px;
+  justify-content:center;   /* center buttons */
+  gap:12px;
   flex-wrap:wrap;
-  margin:14px 0 10px;
+  margin:16px 0 10px;
 }
 
+/* Base button (neutral) */
 .btn{
   padding:10px 14px;
-  border-radius:12px;
+  border-radius:999px;      /* pill */
   text-decoration:none;
   font-weight:600;
-
-  background:var(--blue);
-  color:#ffffff;
-  border:1px solid var(--blue);
-
-  box-shadow:0 6px 16px rgba(37, 99, 235, 0.18);
-  transition:transform 0.05s ease, background 0.15s ease, border-color 0.15s ease;
+  font-size:14px;
+  border:1px solid var(--bd);
+  background:#ffffff;
+  color:var(--fg);
+  box-shadow:0 6px 18px rgba(16, 24, 40, 0.06);
+  transition:transform 0.06s ease, box-shadow 0.15s ease, background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 
 .btn:hover{
-  background:var(--blueHover);
-  border-color:var(--blueHover);
+  transform:translateY(-1px);
+  box-shadow:0 10px 26px rgba(16, 24, 40, 0.10);
 }
 
 .btn:active{
-  transform:translateY(1px);
+  transform:translateY(0px);
 }
 
-/* Status box */
-.note{
-  border:1px solid var(--bd);
-  background:#f8fafc;
-  padding:12px 14px;
-  border-radius:14px;
-  margin:14px 0 0;
+/* 1) Paper = primary */
+.badges .btn:nth-child(1){
+  background:#2563eb;
+  border-color:#2563eb;
+  color:#fff;
+}
+.badges .btn:nth-child(1):hover{
+  background:#1d4ed8;
+  border-color:#1d4ed8;
 }
 
-/* Lists */
-ul{margin:10px 0 0 18px}
-li{margin:6px 0}
+/* 2) Code = dark */
+.badges .btn:nth-child(2){
+  background:#111827;     /* near-black */
+  border-color:#111827;
+  color:#fff;
+}
+.badges .btn:nth-child(2):hover{
+  background:#0b1220;
+  border-color:#0b1220;
+}
 
-/* Mobile */
-@media(max-width:700px){
-  h1{font-size:30px}
+/* 3) HF = neutral */
+.badges .btn:nth-child(3){
+  background:#f3f4f6;     /* light gray */
+  border-color:#e5e7eb;
+  color:#111827;
+}
+.badges .btn:nth-child(3):hover{
+  background:#e5e7eb;
+  border-color:#d1d5db;
 }
