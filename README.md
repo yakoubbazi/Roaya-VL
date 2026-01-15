@@ -3,9 +3,8 @@
 </p>
 
 
-<p align="center" style="margin-top:-8px; font-size:500px;">
-  <b>رؤيا</b>
-</p>
+<h1 align="center"><span style="font-size:64px;">رؤيا</span></h1>
+
 
 <h1 align="center">
   Roa’ya-VL-3B: Compression-First Visual Tokenization for Arabic–English VLMs
