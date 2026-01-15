@@ -1,11 +1,99 @@
-:root{--w:1050px;--fg:#0b1020;--mut:#4b5563;--bd:#e5e7eb;}
+:root{
+  --w: 980px;
+  --fg:#0b1020;
+  --mut:#4b5563;
+  --bd:#e5e7eb;
+}
+
 *{box-sizing:border-box}
-body{margin:0;font:16px/1.6 system-ui;color:var(--fg);background:#fff}
-.wrap{max-width:var(--w);margin:0 auto;padding:24px}
-h1{font-size:34px;line-height:1.15;margin:10px 0 8px}
+body{
+  margin:0;
+  font:16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  color:var(--fg);
+  background:#fff;
+}
+
+.wrap{
+  max-width:var(--w);
+  margin:0 auto;
+  padding:28px 22px 60px;
+}
+
+/* Headings */
+h1{
+  font-size:36px;
+  line-height:1.12;
+  margin:10px 0 10px;
+  letter-spacing:-0.02em;
+}
+h2{
+  margin:26px 0 10px;
+  font-size:22px;
+}
+p{margin:10px 0}
+
+/* Gradient word */
+.grad{
+  background:linear-gradient(90deg,#ff4aa2,#4c7dff);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+/* Top logo */
+.topbar{
+  display:flex;
+  justify-content:center;
+  margin-top:6px;
+  margin-bottom:10px;
+}
+.logo{
+  height:54px;          /* adjust if needed */
+  width:auto;
+}
+
+/* Subtitle + authors */
 .sub{color:var(--mut);margin:0 0 14px}
-.grad{background:linear-gradient(90deg,#ff4aa2,#4c7dff);-webkit-background-clip:text;color:transparent}
-.badges{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
-.btn{border:1px solid var(--bd);padding:10px 14px;border-radius:12px;text-decoration:none;color:var(--fg)}
+.authors{
+  margin:6px 0 10px;
+  color:var(--fg);
+}
+.aff{
+  color:var(--mut);
+  font-size:14px;
+}
+
+/* Buttons */
+.badges{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:14px 0 10px;
+}
+.btn{
+  border:1px solid var(--bd);
+  padding:10px 14px;
+  border-radius:12px;
+  text-decoration:none;
+  color:var(--fg);
+  background:#fff;
+}
 .btn:hover{background:#f8fafc}
-.note{border:1px solid var(--bd);background:#f8fafc;padding:12px 14px;border-radius:14px;margin:14px 0}
+
+/* Status box */
+.note{
+  border:1px solid var(--bd);
+  background:#f8fafc;
+  padding:12px 14px;
+  border-radius:14px;
+  margin:14px 0 0;
+}
+
+/* Lists */
+ul{margin:10px 0 0 18px}
+li{margin:6px 0}
+
+/* Mobile */
+@media(max-width:700px){
+  h1{font-size:30px}
+  .logo{height:46px}
+}
