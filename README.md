@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/assets/Roaya_VL_logo.png" alt="Roa’ya-VL logo" width="220">
+  <img src="Roaya-VL/docs/assets/Roaya_VL_logo.png" alt="Roa’ya-VL logo" width="220">
 </p>
 
 <p align="center" style="margin-top:-8px; font-size:100px;">
