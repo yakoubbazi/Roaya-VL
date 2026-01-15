@@ -3,9 +3,8 @@
 </p>
 
 
-<p align="center">
-  <img alt="Roa'ya" src="https://img.shields.io/badge/النموذج%20اللغوي%20البصري%20رؤيا-15803d?style=for-the-badge">
-</p>
+<h2 align="center"><span style="color:#15803d;">النموذج اللغوي البصري رؤيا</span></h2>
+
 
 
 <h1 align="center">
