@@ -52,10 +52,11 @@ Work in progress.
 
 ### What is Roa’ya-VL-3B?
 We introduce Roa’ya-VL-3B, a bilingual Arabic–English VLM built from scratch to evaluate whether compression-first, OCR-style vision encoders can generalize to broader VLM tasks under a fixed visual token budget. Roa’ya-VL-3B combines a token-efficient vision encoder (DeepSeek-OCR–inspired) with Qwen2.5-VL-3B, supporting 256-token (1024×1024), 400-token (1280×1280), and tiled document settings (up to 9×400 tokens).
-
-Our aim is not to claim state-of-the-art performance. Instead, we systematically study VLM training paradigms—pretraining, instruction tuning, and preference optimization / reinforcement learning—and report transparent intermediate validation to understand how data mixture and tokenization choices affect OCR fidelity, general reasoning, and Arabic visual understanding. The model is trained on an 18.5M open instruction mixture (including 1.5M Arabic). We will release weights, code, and configs.
+We systematically study VLM training paradigms—pretraining, instruction tuning, and preference optimization / reinforcement learning—and report transparent intermediate validation to understand how data mixture and tokenization choices affect OCR fidelity, general reasoning, and Arabic visual understanding. The model is trained on an 18.5M open instruction mixture (including 1.5M Arabic). We will release weights, code, and configs.
 
 **Tokenization regimes**
+- **Tiny:** 520×520 → **96** visual tokens  
+- **Small:** 680×680 → **100** visual tokens  
 - **Base:** 1024×1024 → **256** visual tokens  
 - **Large:** 1280×1280 → **400** visual tokens  
 - **Tiling:** up to **9×400** tokens for document-scale inputs / multi-image
@@ -67,7 +68,7 @@ Our aim is not to claim state-of-the-art performance. Instead, we systematically
 - **Models:** soon
 
 ### Roadmap
-- [ ] Teaser examples (Arabic OCR / DocVQA / VQA / multi-image)
+- [ ] Teaser examples (OCR / DocVQA / VQA / multi-image)
 - [ ] Results table + training trajectory plot
 - [ ] Reproducibility checklist (scripts + configs)
 - [ ] Public release (weights + code + evaluation)
