@@ -73,7 +73,7 @@ We introduce Roa’ya-VL-3B, a bilingual Arabic–English VLM built from scratch
 ### Training pipeline (current: Stage 2)
 
 <p align="center">
-  <img src="docs/assets/roaya_training_pipeline.png" width="980" alt="Roa’ya-VL training pipeline (current: Stage 2)">
+  <img src="docs/assets/Train_Pipeline.png" width="980" alt="Roa’ya-VL training pipeline (current: Stage 2)">
 </p>
 
 ### Citation
