@@ -54,7 +54,7 @@ Work in progress.
 
 ### Training pipeline (current: Stage 2)
 <p align="center">
-  <img src="docs/assets/Train_Pipeline.png" width="900" alt="Roa’ya-VL training pipeline (Stage 2)">
+  <img src="docs/assets/Train_Piepline.png" width="900" alt="Roa’ya-VL training pipeline (Stage 2)">
 </p>
 <p align="center"><i>Stage-2 instruction tuning: token-efficient vision encoder + projector + Qwen2.5-VL-3B backbone.</i></p>
 
