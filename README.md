@@ -6,6 +6,7 @@
   مشروع رؤيا — الهدف: بناء نموذج لغوي-بصري عربي–إنجليزي بكفاءة عالية في عدد الرموز البصرية، مع تدريب شفاف وتقييم قابل لإعادة الإنتاج.
 </p>
 
+<h1 align="center" style="font-size:42px; line-height:1.15; margin:10px 0 8px;">
   Roa’ya-VL-3B: Compression-First Visual Tokenization for Arabic–English VLMs
 </h1>
 
