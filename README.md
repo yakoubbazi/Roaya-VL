@@ -50,6 +50,7 @@ Work in progress.
 
 ### 📢 Latest Updates
 - **2026-01-17**: Stage-2 instruction tuning ongoing (~12k steps). Project page and pipeline figure added.
+- **Best so far (Stage-2): 45K AVG=64.04** (MMBench 69.50 / OCRBench 60.90 / TextVQA 61.72).
 - **Upcoming**: Stage-2 checkpoint + evaluation logs (TextVQA_VAL, OCRBench, DocVQA, MMBench).
 
 ### Training pipeline (current: Stage 2)
@@ -58,7 +59,26 @@ Work in progress.
 </p>
 <p align="center"><i>Stage-2 instruction tuning: token-efficient vision encoder + projector + Qwen2.5-VL-3B backbone.</i></p>
 
-### What is Roa’ya_toggle
+### 📊 Stage-2 (intermediate) validation results
+
+**Notes:** validation results during **Stage-2 instruction tuning** (in progress).  
+Scores may fluctuate across checkpoints; later stages (curation / RL) are not applied yet.
+
+| Step | MMBench_DEV_EN | OCRBench | TextVQA_VAL | AVG (EN) |
+|---:|---:|---:|---:|---:|
+| 5K  | 60.69 | 49.20 | 50.33 | 53.41 |
+| 10K | 59.82 | 55.30 | 55.84 | 56.99 |
+| 15K | 64.85 | 56.20 | 54.78 | 58.61 |
+| 20K | 63.11 | 58.80 | 54.72 | 58.88 |
+| 25K | 63.54 | 56.50 | 54.96 | 58.33 |
+| 30K | 67.32 | 58.50 | 60.28 | 62.03 |
+| 35K | 64.67 | 58.90 | 60.23 | 61.27 |
+| 40K | 64.32 | 58.10 | 62.13 | 61.52 |
+| 45K | 69.50 | 60.90 | 61.72 | 64.04 |
+| 48K | 65.84 | 60.70 | 61.67 | 62.74 |
+| 50K | 64.15 | 62.50 | 61.83 | 62.83 |
+
+### What is Roa’ya-VL-3B?
 We introduce Roa’ya-VL-3B, a bilingual Arabic–English VLM built from scratch to evaluate whether compression-first, OCR-style vision encoders can generalize to broader VLM tasks under a fixed visual token budget. Roa’ya-VL-3B combines a token-efficient vision encoder (DeepSeek-OCR–inspired) with Qwen2.5-VL-3B, supporting 256-token (1024×1024), 400-token (1280×1280), and tiled document settings (up to 9×400 tokens). We systematically study VLM training paradigms—pretraining, instruction tuning, and preference optimization / reinforcement learning—and report transparent intermediate validation to understand how data mixture and tokenization choices affect OCR fidelity, general reasoning, and Arabic visual understanding. The model is trained on an 18.5M open instruction mixture (including 1.5M Arabic). We will release weights, code, and configs.
 
 **Tokenization regimes**
@@ -84,7 +104,7 @@ We introduce Roa’ya-VL-3B, a bilingual Arabic–English VLM built from scratch
 ```bibtex
 @article{bazi2025roaya,
   title   = {Roa'ya-VL-3B: Compression-First Visual Tokenization for Arabic-English VLMs},
-  author  = {Bazi Yakoub,  Zuair Mansour and Al Rahhal Mohamad Mahmoud},
+  author  = {Bazi, Yakoub and Zuair, Mansour and Al Rahhal, Mohamad Mahmoud},
   journal = {arXiv preprint arXiv:XXXX.XXXXX},
   year    = {2025}
 }
