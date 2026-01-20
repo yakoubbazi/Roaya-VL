@@ -2,9 +2,10 @@
   <img src="docs/assets/Roaya_VL_logo_w256.png" width="220" alt="Roa’ya-VL logo">
 </p>
 
-<p align="center" style="color:#4b5563; margin-top:-10px;">
+<p align="center" style="color:#4b5563; margin-top:-10px; font-size:20px; font-weight:800;">
   مشروع رؤيا — الهدف: بناء نموذج لغوي-بصري عربي–إنجليزي بكفاءة عالية في عدد الرموز البصرية، مع تدريب شفاف وتقييم قابل لإعادة الإنتاج.
 </p>
+
 
 <h1 align="center" style="font-size:42px; line-height:1.15; margin:10px 0 8px;">
   Roa’ya-VL-3B: Compression-First Visual Tokenization for Arabic–English VLMs
