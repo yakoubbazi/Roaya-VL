@@ -46,6 +46,27 @@
 
 ---
 
+
+### What is Roa’ya-VL-3B?
+We introduce Roa’ya-VL-3B, a bilingual Arabic–English VLM built from scratch to evaluate whether compression-first, OCR-style vision encoders can generalize to broader VLM tasks under a fixed visual token budget. Roa’ya-VL-3B combines a token-efficient vision encoder (DeepSeek-OCR–inspired) with Qwen2.5-VL-3B, supporting 256-token (1024×1024), 400-token (1280×1280), and tiled document settings (up to 9×400 tokens). We systematically study VLM training paradigms—pretraining, instruction tuning, and preference optimization / reinforcement learning—and report transparent intermediate validation to understand how data mixture and tokenization choices affect OCR fidelity, general reasoning, and Arabic visual understanding. The model is trained on an 18.5M open instruction mixture (including 1.5M Arabic). We will release weights, code, and configs.
+
+**Tokenization regimes**
+- **Tiny:** 520×520 → **96** visual tokens  
+- **Small:** 680×680 → **100** visual tokens  
+- **Base:** 1024×1024 → **256** visual tokens  
+- **Large:** 1280×1280 → **400** visual tokens  
+- **Tiling:** up to **9×400** tokens for document-scale inputs / multi-image
+
+---
+
+### Resources
+- **Project page:** https://yakoubbazi.github.io/Roaya-VL/
+- **Code:** https://github.com/yakoubbazi/Roaya-VL
+- **Paper:** soon
+- **Models:** soon
+
+---
+
 ### 🔥 Status
 **Stage-2 (instruction tuning) is completed (early stop).**  
 Training reached **50K steps**, but was stopped due to an infrastructure/storage incident.  
@@ -86,25 +107,6 @@ Scores may fluctuate across checkpoints; later stages (curation / RL) are not ap
 
 ---
 
-### What is Roa’ya-VL-3B?
-We introduce Roa’ya-VL-3B, a bilingual Arabic–English VLM built from scratch to evaluate whether compression-first, OCR-style vision encoders can generalize to broader VLM tasks under a fixed visual token budget. Roa’ya-VL-3B combines a token-efficient vision encoder (DeepSeek-OCR–inspired) with Qwen2.5-VL-3B, supporting 256-token (1024×1024), 400-token (1280×1280), and tiled document settings (up to 9×400 tokens). We systematically study VLM training paradigms—pretraining, instruction tuning, and preference optimization / reinforcement learning—and report transparent intermediate validation to understand how data mixture and tokenization choices affect OCR fidelity, general reasoning, and Arabic visual understanding. The model is trained on an 18.5M open instruction mixture (including 1.5M Arabic). We will release weights, code, and configs.
-
-**Tokenization regimes**
-- **Tiny:** 520×520 → **96** visual tokens  
-- **Small:** 680×680 → **100** visual tokens  
-- **Base:** 1024×1024 → **256** visual tokens  
-- **Large:** 1280×1280 → **400** visual tokens  
-- **Tiling:** up to **9×400** tokens for document-scale inputs / multi-image
-
----
-
-### Resources
-- **Project page:** https://yakoubbazi.github.io/Roaya-VL/
-- **Code:** https://github.com/yakoubbazi/Roaya-VL
-- **Paper:** soon
-- **Models:** soon
-
----
 
 ### Roadmap
 - [ ] Evaluate Stage-2 checkpoints on additional benchmarks (DocVQA, InfoVQA, POPE, MMMU, MMStar, etc.)
