@@ -116,6 +116,20 @@ We introduce Roa’ya-VL-3B, a bilingual Arabic–English VLM built from scratch
 
 ---
 
+### Acknowledgement
+
+- **LLaVA-NeXT**: the codebase we built upon for training/evaluation utilities and core VLM engineering components.  
+  https://github.com/LLaVA-VL/LLaVA-NeXT
+
+- **DeepSeek-OCR**: the OCR-style, compression-first vision encoder inspiration we adopt/adapt for token-efficient visual tokenization in Roa’ya-VL.  
+  https://github.com/deepseek-ai/DeepSeek-OCR
+
+- **VLMEvalKit**: the evaluation toolkit we used to integrate Roa’ya-VL and run standardized evaluations across multiple VLM benchmarks.  
+  https://github.com/open-compass/VLMEvalKit
+
+> **Note:** Roa’ya-VL is an independent research project and is not affiliated with LLaVA-NeXT, DeepSeek-OCR, or VLMEvalKit.
+
+
 ### Citation
 ```bibtex
 @article{bazi2025roaya,
@@ -125,16 +139,4 @@ We introduce Roa’ya-VL-3B, a bilingual Arabic–English VLM built from scratch
   year    = {2025}
 }
 
----
-Acknowledgement
 
-LLaVA-NeXT: the codebase we built upon for training/evaluation utilities and core VLM engineering components.
-https://github.com/LLaVA-VL/LLaVA-NeXT
-
-DeepSeek-OCR: the OCR-style, compression-first vision encoder inspiration we adopt/adapt for token-efficient visual tokenization in Roa’ya-VL.
-https://github.com/deepseek-ai/DeepSeek-OCR
-
-VLMEvalKit: the evaluation toolkit we used to integrate Roa’ya-VL and run standardized evaluations across multiple VLM benchmarks.
-https://github.com/open-compass/VLMEvalKit
-
-Note: Roa’ya-VL is an independent research project and is not affiliated with LLaVA-NeXT, DeepSeek-OCR, or VLMEvalKit.
