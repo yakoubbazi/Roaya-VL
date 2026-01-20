@@ -108,3 +108,29 @@ We introduce Roa’ya-VL-3B, a bilingual Arabic–English VLM built from scratch
   journal = {arXiv preprint arXiv:XXXX.XXXXX},
   year    = {2025}
 }
+
+---
+
+## 🧩 Upstream projects and acknowledgements
+
+Roa’ya-VL benefits from ideas and open-source tooling developed by the community. We are grateful to the authors and maintainers of the following projects:
+
+- **LLaVA-NeXT** (VLM engineering baseline; training/evaluation utilities and conventions):  
+  https://github.com/LLaVA-VL/LLaVA-NeXT
+
+- **DeepSeek-OCR** (inspiration for compression-first, OCR-style visual tokenization):  
+  https://github.com/deepseek-ai/DeepSeek-OCR
+
+**How we relate to these projects**
+- **LLaVA-NeXT:** We follow similar training/evaluation conventions and reuse/extend compatible utilities where applicable in this repository.
+- **DeepSeek-OCR:** Our vision tokenization design is *inspired by* the compression-first approach introduced in DeepSeek-OCR; Roa’ya-VL adapts these ideas for a bilingual Arabic–English general-purpose VLM setting.
+
+> **Note:** Roa’ya-VL is an independent research project and is **not affiliated with** LLaVA-NeXT or DeepSeek-OCR.
+
+### License / third-party notice
+If you reuse code from upstream repositories, please ensure their licenses are respected.  
+We recommend adding a `THIRD_PARTY_NOTICES.md` summarizing:
+- project name + URL
+- license
+- which files/modules were adapted (if any)
+
