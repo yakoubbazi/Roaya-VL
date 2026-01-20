@@ -45,48 +45,28 @@
 
 ---
 
-## 🔥 Status
+### 🔥 Status
 **Stage-2 (instruction tuning) is completed (early stop).**  
 Training reached **50K steps**, but was stopped due to an infrastructure/storage incident.  
-We therefore finalize Stage-2 at this point and will release the **best checkpoint** and evaluation logs.
+We finalize Stage-2 at this point and will release the **best checkpoint** and evaluation logs.
 
-## 📢 Latest updates
+### 📢 Latest Updates
 - **2026-01-20**: Stage-2 concluded at **50K** (unplanned stop due to infrastructure/storage issue).
 - **Best Stage-2 checkpoint:** **45K** — **AVG=64.04** (MMBench 69.50 / OCRBench 60.90 / TextVQA 61.72).
-- **Next (short-term):** evaluate Stage-2 checkpoints on additional benchmarks (DocVQA, InfoVQA, POPE, MMMU, MMStar, etc.).
-- **Next (mid-term):** proceed to **Stage-3** (curated refinement) once full evaluation is complete.
+- **Next:** evaluate Stage-2 on additional benchmarks (DocVQA, InfoVQA, POPE, MMMU, MMStar, etc.).
+- **Later:** proceed to **Stage-3 (curated refinement)** based on error-driven mining (Arabic-focused).
 
 ---
 
-## 🧠 What is Roa’ya-VL-3B?
-Roa’ya-VL-3B is a bilingual Arabic–English vision-language model that studies whether **compression-first, OCR-style visual tokenization** can generalize to broad VLM tasks under a fixed visual token budget.
-
-It combines:
-- a **token-efficient vision encoder** (DeepSeek-OCR–inspired), and
-- a **Qwen2.5-VL-3B** backbone.
-
-It supports multiple tokenization regimes:
-- **Tiny:** 520×520 → **96** visual tokens  
-- **Small:** 680×680 → **100** visual tokens  
-- **Base:** 1024×1024 → **256** visual tokens  
-- **Large:** 1280×1280 → **400** visual tokens  
-- **Tiling:** up to **9×400** tokens for document-scale inputs / multi-image
-
-The model is trained on an **18.5M open instruction mixture** (including ~**1.5M Arabic**).  
-We report transparent intermediate validation to understand how data mixture and tokenization choices affect OCR fidelity, general reasoning, and Arabic visual understanding.
-
----
-
-## 🧱 Training pipeline (Stage 2)
+### Training pipeline (current: Stage 2)
 <p align="center">
   <img src="docs/assets/Train_Piepline.png" width="900" alt="Roa’ya-VL training pipeline (Stage 2)">
 </p>
 <p align="center"><i>Stage-2 instruction tuning: token-efficient vision encoder + projector + Qwen2.5-VL-3B backbone.</i></p>
 
----
+### 📊 Stage-2 (intermediate) validation results
 
-## 📊 Stage-2 (intermediate) validation results
-**Notes:** validation results tracked during Stage-2 training.  
+**Notes:** validation results during **Stage-2 instruction tuning** (in progress).  
 Scores may fluctuate across checkpoints; later stages (curation / RL) are not applied yet.
 
 | Step | MMBench_DEV_EN | OCRBench | TextVQA_VAL | AVG (EN) |
@@ -105,33 +85,19 @@ Scores may fluctuate across checkpoints; later stages (curation / RL) are not ap
 
 ---
 
-## ✅ Checkpoints
-- **Stage-2 (best):** Roa’ya-VL-3B @ **45K** (release soon)  
-  Includes: config, training arguments, and evaluation logs.
+### What is Roa’ya-VL-3B?
+We introduce Roa’ya-VL-3B, a bilingual Arabic–English VLM built from scratch to evaluate whether compression-first, OCR-style vision encoders can generalize to broader VLM tasks under a fixed visual token budget. Roa’ya-VL-3B combines a token-efficient vision encoder (DeepSeek-OCR–inspired) with Qwen2.5-VL-3B, supporting 256-token (1024×1024), 400-token (1280×1280), and tiled document settings (up to 9×400 tokens). We systematically study VLM training paradigms—pretraining, instruction tuning, and preference optimization / reinforcement learning—and report transparent intermediate validation to understand how data mixture and tokenization choices affect OCR fidelity, general reasoning, and Arabic visual understanding. The model is trained on an 18.5M open instruction mixture (including 1.5M Arabic). We will release weights, code, and configs.
+
+**Tokenization regimes**
+- **Tiny:** 520×520 → **96** visual tokens  
+- **Small:** 680×680 → **100** visual tokens  
+- **Base:** 1024×1024 → **256** visual tokens  
+- **Large:** 1280×1280 → **400** visual tokens  
+- **Tiling:** up to **9×400** tokens for document-scale inputs / multi-image
 
 ---
 
-## 🔎 Planned evaluation (next)
-We will evaluate the best Stage-2 checkpoints on a broader suite of benchmarks, including:
-- **DocVQA / InfoVQA** (document understanding and key-value extraction)
-- **OCRBench / TextVQA** (OCR robustness)
-- **MMBench / MMStar / MMMU** (general multi-modal reasoning)
-- **POPE / HallusionBench** (hallucination & grounding robustness)
-- Additional Arabic-focused evaluations (to be announced)
-
----
-
-## 🗺️ Roadmap
-- [ ] Evaluate Stage-2 checkpoint(s) on additional benchmarks (DocVQA, InfoVQA, POPE, MMMU, MMStar, etc.)
-- [ ] Stage-3 curated refinement (Arabic-focused), based on error-driven mining
-- [ ] Preference optimization / RL (after Stage-3)
-- [ ] Teaser examples (OCR / DocVQA / VQA / multi-image)
-- [ ] Reproducibility checklist (scripts + configs)
-- [ ] Public release (weights + code + evaluation)
-
----
-
-## Resources
+### Resources
 - **Project page:** https://yakoubbazi.github.io/Roaya-VL/
 - **Code:** https://github.com/yakoubbazi/Roaya-VL
 - **Paper:** soon
@@ -139,7 +105,18 @@ We will evaluate the best Stage-2 checkpoints on a broader suite of benchmarks, 
 
 ---
 
-## Citation
+### Roadmap
+- [ ] Evaluate Stage-2 checkpoints on additional benchmarks (DocVQA, InfoVQA, POPE, MMMU, MMStar, etc.)
+- [ ] Stage-3 curated refinement (Arabic-focused), based on error-driven mining
+- [ ] Preference optimization / RL (after Stage-3)
+- [ ] Teaser examples (OCR / DocVQA / VQA / multi-image)
+- [ ] Results table + training trajectory plot
+- [ ] Reproducibility checklist (scripts + configs)
+- [ ] Public release (weights + code + evaluation)
+
+---
+
+### Citation
 ```bibtex
 @article{bazi2025roaya,
   title   = {Roa'ya-VL-3B: Compression-First Visual Tokenization for Arabic-English VLMs},
@@ -148,14 +125,16 @@ We will evaluate the best Stage-2 checkpoints on a broader suite of benchmarks, 
   year    = {2025}
 }
 
-## Acknowledgement
-- **LLaVA-NeXT**: the codebase we built upon for training/evaluation utilities and core VLM engineering components.  
-  https://github.com/LLaVA-VL/LLaVA-NeXT
+---
+Acknowledgement
 
-- **DeepSeek-OCR**: the OCR-style, compression-first vision encoder inspiration we adopt/adapt for token-efficient visual tokenization in Roa’ya-VL.  
-  https://github.com/deepseek-ai/DeepSeek-OCR
+LLaVA-NeXT: the codebase we built upon for training/evaluation utilities and core VLM engineering components.
+https://github.com/LLaVA-VL/LLaVA-NeXT
 
-- **VLMEvalKit**: the evaluation toolkit we used to integrate Roa’ya-VL and run standardized evaluations across multiple VLM benchmarks.  
-  https://github.com/open-compass/VLMEvalKit
+DeepSeek-OCR: the OCR-style, compression-first vision encoder inspiration we adopt/adapt for token-efficient visual tokenization in Roa’ya-VL.
+https://github.com/deepseek-ai/DeepSeek-OCR
 
-> **Note:** Roa’ya-VL is an independent research project and is **not affiliated with** LLaVA-NeXT, DeepSeek-OCR, or VLMEvalKit.
+VLMEvalKit: the evaluation toolkit we used to integrate Roa’ya-VL and run standardized evaluations across multiple VLM benchmarks.
+https://github.com/open-compass/VLMEvalKit
+
+Note: Roa’ya-VL is an independent research project and is not affiliated with LLaVA-NeXT, DeepSeek-OCR, or VLMEvalKit.
