@@ -3,7 +3,7 @@
 </p>
 
 <p align="center" style="color:#4b5563; margin-top:-10px; font-size:20px; font-weight:800;">
-  مشروع رؤيا — الهدف: بناء نموذج لغوي-بصري عربي–إنجليزي بكفاءة عالية في عدد الرموز البصرية، مع تدريب شفاف وتقييم قابل لإعادة الإنتاج.
+  مشروع رؤيا — الهدف: بناء نموذج لغوي-بصري عربي–إنجليزي.
 </p>
 
 <h1 align="center" style="font-size:42px; line-height:1.15; margin:10px 0 8px;">
