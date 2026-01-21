@@ -46,12 +46,11 @@
 ---
 
 ## 🔥 Status
-**Stage-2 (instruction tuning) is ongoing.**  
-We recovered the training data/checkpoints and **resumed Stage-2**. Current progress: **~13K steps**.
+**Stage-2 (instruction tuning) is ongoing.** Current progress: **~13K steps**.
 
 ## 📢 Latest Updates
-- **2026-01-21**: Stage-2 resumed successfully after data recovery (**~13K steps**).
-- **Next**: continue Stage-2, then run **expanded evaluation** on additional benchmarks (DocVQA, InfoVQA, POPE, MMMU, MMStar, etc.) before deciding the next stage.
+- **2026-01-21**: added Stage-2 validation trajectory figure (MMBench-EN / OCRBench / DocVQA / TextVQA / Avg).
+- **Next**: continue Stage-2, then run **expanded evaluation** (DocVQA, InfoVQA, POPE, MMMU, MMStar, etc.) before deciding the next stage.
 
 ---
 
