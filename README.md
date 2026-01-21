@@ -63,7 +63,6 @@
 ---
 
 ## 📈 Stage-2 validation trajectory (ongoing)
-**Notes:** intermediate validation results during Stage-2 training. Scores may fluctuate across checkpoints.
 
 <p align="center">
   <img src="docs/assets/stage2_trends.png" width="1100" alt="Stage-2 validation trajectory (MMBench-EN / OCRBench / DocVQA / TextVQA / Average)">
