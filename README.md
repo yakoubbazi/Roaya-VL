@@ -81,13 +81,11 @@
 We introduce **Roa’ya-VL-3B**, a bilingual **Arabic–English** vision–language model (VLM) built to evaluate whether **compression-first, OCR-style visual tokenization** can generalize beyond OCR to broader VLM tasks under a **fixed visual token budget**.
 
 Roa’ya-VL-3B combines:
-- A **DeepSeek-OCR–inspired** visual encoder (compression-first tokenization; SAM & CLIP features)
+- A **DeepSeek-OCR** visual encoder (compression-first tokenization; SAM & CLIP features)
 - A lightweight **projector**
 - A strong open backbone **Qwen2.5-VL-3B**
 
 The model supports token-efficient regimes (256/400 tokens) and document-scale tiling (up to 9×400 tokens). We study practical training stages (alignment → instruction tuning → Arabic consolidation → preference optimization) and provide transparent intermediate validation to understand how **data mixture**, **tokenization**, and **Arabic-focused consolidation** affect OCR fidelity, reasoning, and Arabic visual understanding.
-
-The Stage-2 model is trained on an **~18M open instruction mixture** (including Arabic).
 
 ---
 
