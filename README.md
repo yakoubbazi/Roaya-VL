@@ -46,11 +46,17 @@
 ---
 
 ## 🔥 Status
-**Stage-2 (instruction tuning) is ongoing.** Current progress: **~13K steps**.
+**Stage-2 (instruction tuning) completed up to ~50K steps.**  
+- Data mixture size: **~18.0M samples** (loaded: **17,937,575**)  
+- Effective global batch: **128K tokens/step**  
+- Approx. compute coverage: **~6.4B tokens processed** (50K × 128K)  
+- Selected **best checkpoint: ~45K** (used as the Stage-2 model for reporting and next stages)
+
+---
 
 ## 📢 Latest Updates
-- **2026-01-21**: added Stage-2 validation trajectory figure (MMBench-EN / OCRBench / DocVQA / TextVQA / Avg).
-- **Next**: continue Stage-2, then run **expanded evaluation** (DocVQA, InfoVQA, POPE, MMMU, MMStar, etc.) before deciding the next stage.
+- **2026-01-21**: Added Stage-2 validation trajectory figure (**MMBench-EN / OCRBench / TextVQA / Avg**).
+- **2026-01-27**: Selected **best Stage-2 checkpoint (~45K)** from the trajectory (trained up to **50K**).
 
 ---
 
@@ -58,28 +64,39 @@
 <p align="center">
   <img src="docs/assets/Train_Piepline.png" width="900" alt="Roa’ya-VL training pipeline (Stage 2)">
 </p>
-<p align="center"><i>Stage-2 instruction tuning: token-efficient vision encoder + projector + Qwen2.5-VL-3B backbone.</i></p>
+<p align="center"><i>Stage-2 instruction tuning: DeepSeek-OCR–inspired compression-first visual tokenization + projector + Qwen2.5-VL-3B backbone, trained on a FineVision mix with Arabic.</i></p>
 
 ---
 
-## 📈 Stage-2 validation trajectory (ongoing)
+## 📈 Stage-2 validation trajectory (reported)
 
 <p align="center">
-  <img src="docs/assets/stage2_trends.png" width="1100" alt="Stage-2 validation trajectory (MMBench-EN / OCRBench / DocVQA / TextVQA / Average)">
+  <img src="docs/assets/stage2_trends.png" width="1100" alt="Stage-2 validation trajectory (MMBench-EN / OCRBench / TextVQA / Average)">
 </p>
-<p align="center"><i>Validation trend across Stage-2 checkpoints (MMBench-EN, OCRBench, DocVQA, TextVQA, and Average).</i></p>
+<p align="center"><i>Validation trend across Stage-2 checkpoints (MMBench-EN, OCRBench, TextVQA, and Average). We report the best checkpoint (~45K) as the final Stage-2 model.</i></p>
 
 ---
 
 ## What is Roa’ya-VL-3B?
-We introduce Roa’ya-VL-3B, a bilingual Arabic–English VLM built from scratch to evaluate whether compression-first, OCR-style vision encoders can generalize to broader VLM tasks under a fixed visual token budget. Roa’ya-VL-3B combines a token-efficient vision encoder (DeepSeek-OCR–inspired) with Qwen2.5-VL-3B, supporting 256-token (1024×1024), 400-token (1280×1280), and tiled document settings (up to 9×400 tokens). We systematically study VLM training paradigms—pretraining, instruction tuning, and preference optimization / reinforcement learning—and report transparent intermediate validation to understand how data mixture and tokenization choices affect OCR fidelity, general reasoning, and Arabic visual understanding. The model is trained on an 18.5M open instruction mixture (including 1.5M Arabic). We will release weights, code, and configs.
+We introduce **Roa’ya-VL-3B**, a bilingual **Arabic–English** vision–language model (VLM) built to evaluate whether **compression-first, OCR-style visual tokenization** can generalize beyond OCR to broader VLM tasks under a **fixed visual token budget**.
 
-**Tokenization regimes**
+Roa’ya-VL-3B combines:
+- A **DeepSeek-OCR–inspired** visual encoder (compression-first tokenization; SAM & CLIP features)
+- A lightweight **projector**
+- A strong open backbone **Qwen2.5-VL-3B**
+
+The model supports token-efficient regimes (256/400 tokens) and document-scale tiling (up to 9×400 tokens). We study practical training stages (alignment → instruction tuning → Arabic consolidation → preference optimization) and provide transparent intermediate validation to understand how **data mixture**, **tokenization**, and **Arabic-focused consolidation** affect OCR fidelity, reasoning, and Arabic visual understanding.
+
+The Stage-2 model is trained on an **~18M open instruction mixture** (including Arabic).
+
+---
+
+## Tokenization regimes
 - **Tiny:** 520×520 → **96** visual tokens  
 - **Small:** 680×680 → **100** visual tokens  
 - **Base:** 1024×1024 → **256** visual tokens  
 - **Large:** 1280×1280 → **400** visual tokens  
-- **Tiling:** up to **9×400** tokens for document-scale inputs / multi-image
+- **Tiling:** up to **9×400** tokens for document-scale inputs / multi-image  
 
 ---
 
@@ -92,11 +109,12 @@ We introduce Roa’ya-VL-3B, a bilingual Arabic–English VLM built from scratch
 ---
 
 ## Roadmap
-- [ ] Continue Stage-2 instruction tuning (ongoing)
-- [ ] Evaluate Stage-2 checkpoints on additional benchmarks (DocVQA, InfoVQA, POPE, MMMU, MMStar, etc.)
-- [ ] Decide next training stage (curated refinement / Stage-3) based on error-driven mining (Arabic-focused)
-- [ ] Preference optimization / RL (after curated refinement)
-- [ ] Teaser examples (OCR / DocVQA / VQA / multi-image)
+- [x] Stage-2 instruction tuning to **~50K steps**
+- [x] Pick **best checkpoint (~45K)** based on Stage-2 validation trend
+- [ ] Expanded evaluation on additional benchmarks (InfoVQA, POPE, MMMU, MMStar, etc.)
+- [ ] **Stage-2.5 Arabic consolidation** (Arabic instruction + OCR/doc + culture)
+- [ ] Stage-3 **preference optimization** (DPO / ORPO / GRPO) when preference/reward data is ready
+- [ ] Teaser examples (OCR / Doc / VQA / multi-image)
 - [ ] Reproducibility checklist (scripts + configs)
 - [ ] Public release (weights + code + evaluation)
 
