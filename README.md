@@ -137,5 +137,5 @@ The model supports token-efficient regimes (256/400 tokens) and document-scale t
   title   = {Roa'ya-VL-3B: Compression-First Visual Tokenization for Arabic-English VLMs},
   author  = {Bazi, Yakoub and Zuair, Mansour and Al Rahhal, Mohamad Mahmoud},
   journal = {arXiv preprint arXiv:XXXX.XXXXX},
-  year    = {2025}
+  year    = {2026}
 }
