@@ -61,7 +61,7 @@
 
 ## 🧱 Training pipeline (current: Stage 2)
 <p align="center">
-  <img src="docs/assets/Train_Piepline.png" width="900" alt="Roa’ya-VL training pipeline (Stage 2)">
+  <img src="docs/assets/Train_Pipeline.png" width="900" alt="Roa’ya-VL training pipeline (Stage 2)">
 </p>
 <p align="center"><i>Stage-2 instruction tuning: DeepSeek-OCR–inspired compression-first visual tokenization + projector + Qwen2.5-VL-3B backbone, trained on a FineVision mix with Arabic.</i></p>
 
@@ -70,7 +70,7 @@
 ## 📈 Stage-2 validation trajectory (reported)
 
 <p align="center">
-  <img src="docs/assets/stage2_trends.png" width="1100" alt="Stage-2 validation trajectory (MMBench-EN / OCRBench / TextVQA / Average)">
+  <img src="docs/assets/stage2_trends_en.png" width="1100" alt="Stage-2 validation trajectory (MMBench-EN / OCRBench / TextVQA / Average)">
 </p>
 <p align="center"><i>Validation trend across Stage-2 checkpoints (MMBench-EN, OCRBench, TextVQA, and Average). We report the best checkpoint (~45K) as the final Stage-2 model.</i></p>
 
