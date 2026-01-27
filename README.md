@@ -48,15 +48,14 @@
 ## 🔥 Status
 **Stage-2 (instruction tuning) completed up to ~50K steps.**  
 - Data mixture size: **~18.0M samples** (loaded: **17,937,575**)  
-- Effective global batch: **128K tokens/step**  
-- Approx. compute coverage: **~6.4B tokens processed** (50K × 128K)  
-- Selected **best checkpoint: ~45K** (used as the Stage-2 model for reporting and next stages)
+- Batch size: **128**  
+- Selected **best checkpoint: 45K** (used as the Stage-2 model for reporting and next stages)
 
 ---
 
 ## 📢 Latest Updates
 - **2026-01-21**: Added Stage-2 validation trajectory figure (**MMBench-EN / OCRBench / TextVQA / Avg**).
-- **2026-01-27**: Selected **best Stage-2 checkpoint (~45K)** from the trajectory (trained up to **50K**).
+- **2026-01-27**: Selected **best Stage-2 checkpoint (45K)** from the trajectory (trained up to **50K**).
 
 ---
 
