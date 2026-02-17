@@ -2,14 +2,21 @@
   <img src="docs/assets/Roaya_VL_logo_w256.png" width="220" alt="Roa’ya-VL logo">
 </p>
 
-<p align="center" style="color:#4b5563; margin-top:-10px; font-size:20px; font-weight:800;">
- مشروع رؤيا — إطار عمل عملي لبناء وتقييم نماذج لغوية-بصرية عربي–إنجليزي لفهم الصور وقراءة النصوص (OCR) والاستدلال.
-  يهدف المشروع إلى توثيق أفضل الممارسات عبر مراحل بناء نماذج VLM: ما قبل التدريب/المحاذاة، الضبط الخاضع للإشراف (SFT)،
-  ثم تحسين التفضيلات (DPO/ORPO/GRPO) أو التعلم التعزيزي</p>
+<p align="center" style="color:#4b5563; margin-top:-10px; font-size:18px; font-weight:800; line-height:1.7;">
+  مشروع رؤيا (PoC) — إطار عمل عملي لبناء وتقييم نماذج لغوية-بصرية عربي–إنجليزي لفهم الصور وقراءة النصوص داخلها (OCR) والاستدلال.
+  يهدف المشروع إلى توثيق أفضل الممارسات والتجارب عبر مراحل بناء نماذج VLM: المواءمة/ما قبل التدريب (عند الحاجة)، الضبط الخاضع للإشراف (SFT)،
+  ثم تحسين التفضيلات (DPO/ORPO/GRPO) أو أساليب RL عند توفر بيانات مناسبة.
+</p>
 
-<h1 align="center" style="font-size:42px; line-height:1.15; margin:10px 0 8px;">
-  Roa’ya-VL-3B: Compression-First Visual Tokenization for Arabic–English VLMs
+<h1 align="center" style="font-size:40px; line-height:1.15; margin:10px 0 8px;">
+  Roa’ya-VL: A Practical Framework for Arabic–English Vision-Language Models
 </h1>
+
+<p align="center" style="color:#6b7280; font-size:15px; margin-top:-4px; line-height:1.5;">
+  Not a single model — a modular recipe for building Arabic–English VLMs (OCR + Doc + VQA + Reasoning).
+  <br/>
+  Current reference build: DeepSeek-OCR–style vision encoder + projector + Qwen2.5-VL-3B backbone.
+</p>
 
 <p align="center">
   <b>Yakoub Bazi</b><sup>1</sup> ·
@@ -30,113 +37,179 @@
 </p>
 
 <p align="center">
-  <a href="#" target="_blank">
-    <img alt="Paper" src="https://img.shields.io/badge/Paper-soon-6c757d?style=for-the-badge">
-  </a>
   <a href="https://yakoubbazi.github.io/Roaya-VL/" target="_blank">
     <img alt="Project Page" src="https://img.shields.io/badge/Project-Page-2563eb?style=for-the-badge">
   </a>
   <a href="https://github.com/yakoubbazi/Roaya-VL" target="_blank">
     <img alt="Code" src="https://img.shields.io/badge/Code-GitHub-111827?style=for-the-badge">
   </a>
-  <a href="#" target="_blank">
-    <img alt="Models" src="https://img.shields.io/badge/HuggingFace-soon-f59e0b?style=for-the-badge">
-  </a>
+  <img alt="Status" src="https://img.shields.io/badge/Status-Proof%20of%20Concept-6c757d?style=for-the-badge">
+  <img alt="Models" src="https://img.shields.io/badge/Models-internal%20for%20now-f59e0b?style=for-the-badge">
 </p>
 
----
+<hr/>
 
-## 🔥 Status
-**Stage-2 (instruction tuning) completed up to ~50K steps.**  
-- Data mixture size: **~18.0M samples** (loaded: **17,937,575**)  
-- Batch size: **128**  
-- Selected **best checkpoint: 45K** (used as the Stage-2 model for reporting and next stages)
+<h2>🔥 Status (as of now)</h2>
+<ul>
+  <li><b>Stage-2 (SFT instruction tuning)</b> completed up to <b>~50K steps</b></li>
+  <li>Data mixture size: <b>~18.0M samples</b> (loaded: <b>17,937,575</b>)</li>
+  <li>Selected best checkpoint: <b>~45K</b> (used as Stage-2 reference)</li>
+  <li><b>Stage-2.5 Arabic consolidation</b> is ongoing (Arabic OCR/Doc + Arabic instruction + optional culture-focused content)</li>
+</ul>
 
----
+<blockquote>
+  <b>Important:</b> Roa’ya-VL is not meant to be locked to one encoder/backbone.
+  The goal is a <b>reproducible, modular framework</b> that helps practitioners build Arabic–English VLMs and understand what changes across stages.
+</blockquote>
 
-## 📢 Latest Updates
-- **2026-01-21**: Added Stage-2 validation trajectory figure (**MMBench-EN / OCRBench / TextVQA / Avg**).
-- **2026-01-27**: Selected **best Stage-2 checkpoint (45K)** from the trajectory (trained up to **50K**).
+<hr/>
 
----
+<h2>🎯 Project Goal</h2>
+<p>
+<b>Roa’ya-VL</b> is a practical framework for developing Arabic–English VLMs that can:
+</p>
+<ul>
+  <li>read and reason over text inside images (<b>OCR / Doc / Screen / Signs</b>),</li>
+  <li>answer questions grounded in images (<b>VQA + reasoning</b>),</li>
+  <li>improve Arabic visual understanding via targeted consolidation,</li>
+  <li>and document best practices for <b>stage-wise VLM development</b>:</li>
+</ul>
+<ol>
+  <li><b>Alignment / pretraining</b> (when applicable)</li>
+  <li><b>Supervised instruction tuning (SFT)</b></li>
+  <li><b>Preference optimization</b> (DPO/ORPO/GRPO) or RL-style improvements when preference/reward data is available</li>
+</ol>
 
-## 🧱 Training pipeline (current: Stage 2)
+<hr/>
+
+<h2>🧩 What Roa’ya Provides</h2>
+
+<h3>1) Modular blueprint (swappable components)</h3>
+<ul>
+  <li><b>Vision encoder (swappable):</b> OCR-centric encoders or general-purpose vision towers</li>
+  <li><b>Projector (swappable):</b> MLP / lightweight adapters / Q-Former-like variants</li>
+  <li><b>LLM backbone (swappable):</b> 3B-class instruction backbones and beyond</li>
+  <li><b>Stage recipes:</b> Stage-2 / Stage-2.5 / Stage-3 with practical guidance on sampling + stability</li>
+  <li><b>Evaluation integration:</b> standardized benchmarking via toolkits (e.g., VLMEvalKit)</li>
+</ul>
+
+<h3>2) Reference build (current prototype)</h3>
+<p>
+The current reference build is one concrete instantiation of the framework:
+</p>
+<ul>
+  <li><b>Vision encoder:</b> DeepSeek-OCR–style (OCR-centric, token-efficient)</li>
+  <li><b>Backbone:</b> Qwen2.5-VL-3B</li>
+  <li><b>Projector:</b> mlp2x_gelu</li>
+  <li><b>Token regime:</b> fixed visual token budgets (e.g., 256/400) + optional tiling for document-scale inputs</li>
+</ul>
+
+<blockquote>
+  <b>Note:</b> This reference build is a <b>baseline implementation</b>, not a claim that DeepSeek-OCR is the best vision tower for all settings.
+  One of the project goals is to test alternative vision encoders/backbones and report what works for Arabic–English OCR + reasoning.
+</blockquote>
+
+<hr/>
+
+<h2>🧱 Training Pipeline (stage-wise)</h2>
 <p align="center">
-  <img src="docs/assets/Train_Pipeline.png" width="900" alt="Roa’ya-VL training pipeline (Stage 2)">
+  <img src="docs/assets/Train_Pipeline.png" width="900" alt="Roa’ya-VL training pipeline">
 </p>
-<p align="center"><i>Stage-2 instruction tuning: DeepSeek-OCR–inspired compression-first visual tokenization + projector + Qwen2.5-VL-3B backbone, trained on a FineVision mix with Arabic.</i></p>
+<p align="center"><i>
+Base build → Stage-2 SFT (broad instruction mix) → Stage-2.5 Arabic consolidation → Stage-3 preference optimization (when ready).
+</i></p>
 
----
+<hr/>
 
-## 📈 Stage-2 validation trajectory (reported)
-
+<h2>📈 Stage-2 Validation (reported)</h2>
 <p align="center">
-  <img src="docs/assets/stage2_trends_en.png" width="1100" alt="Stage-2 validation trajectory (MMBench-EN / OCRBench / TextVQA / Average)">
+  <img src="docs/assets/stage2_trends_en.png" width="1100" alt="Stage-2 validation trajectory">
 </p>
-<p align="center"><i>Validation trend across Stage-2 checkpoints (MMBench-EN, OCRBench, TextVQA, and Average). We report the best checkpoint (~45K) as the final Stage-2 model.</i></p>
+<p align="center"><i>
+Validation trend across Stage-2 checkpoints (e.g., MMBench-EN, OCRBench, TextVQA, Avg). Best checkpoint (~45K) is used as Stage-2 reference.
+</i></p>
 
----
+<hr/>
 
-## What is Roa’ya-VL-3B?
-We introduce **Roa’ya-VL-3B**, a bilingual **Arabic–English** vision–language model (VLM) built to evaluate whether **compression-first, OCR-style visual tokenization** can generalize beyond OCR to broader VLM tasks under a **fixed visual token budget**.
+<h2>🏗️ Stages (How we structure development)</h2>
 
-Roa’ya-VL-3B combines:
-- A **DeepSeek-OCR** visual encoder (compression-first tokenization; SAM & CLIP features)
-- A lightweight **projector**
-- A strong open backbone **Qwen2.5-VL-3B**
+<h3>Stage-2 — Supervised Instruction Tuning (SFT)</h3>
+<ul>
+  <li><b>Goal:</b> a strong general bilingual VLM base (OCR + reasoning + instruction-following)</li>
+  <li><b>Approach:</b> broad multi-domain instruction mix (Arabic included) + checkpoint selection via validation trajectory</li>
+</ul>
 
-The model supports token-efficient regimes (256/400 tokens) and document-scale tiling (up to 9×400 tokens). We study practical training stages (alignment → instruction tuning → Arabic consolidation → preference optimization) and provide transparent intermediate validation to understand how **data mixture**, **tokenization**, and **Arabic-focused consolidation** affect OCR fidelity, reasoning, and Arabic visual understanding.
+<h3>Stage-2.5 — Arabic Consolidation (targeted SFT)</h3>
+<ul>
+  <li><b>Goal:</b> improve Arabic robustness without collapsing general capability</li>
+  <li><b>Approach:</b> Arabic OCR/Doc + Arabic instruction + optional culture-focused content, with careful sampling to reduce overfitting/forgetting</li>
+  <li><b>Practical note:</b> Arabic gains can be delayed and uneven (OCR vs reasoning vs instruction following)</li>
+</ul>
 
----
+<h3>Stage-3 — Preference Optimization (when data exists)</h3>
+<ul>
+  <li><b>Goal:</b> improve helpfulness, formatting, reduce hallucinations, and better align Arabic outputs</li>
+  <li><b>Approach:</b> DPO / ORPO / GRPO depending on preference/reward data availability</li>
+</ul>
 
-## Tokenization regimes
-- **Tiny:** 520×520 → **96** visual tokens  
-- **Small:** 680×680 → **100** visual tokens  
-- **Base:** 1024×1024 → **256** visual tokens  
-- **Large:** 1280×1280 → **400** visual tokens  
-- **Tiling:** up to **9×400** tokens for document-scale inputs / multi-image  
+<hr/>
 
----
+<h2>🧪 Evaluation</h2>
+<p>
+We evaluate checkpoints using standardized tooling (e.g., <b>VLMEvalKit</b>) to track progress across stages.
+We recommend evaluating frequently during Stage-2.5 (e.g., every 500–1000 steps) because improvements may appear slowly and differ by skill.
+</p>
 
-## Resources
-- **Project page:** https://yakoubbazi.github.io/Roaya-VL/
-- **Code:** https://github.com/yakoubbazi/Roaya-VL
-- **Paper:** soon
-- **Models:** soon
+<hr/>
 
----
+<h2>📦 Resources</h2>
+<ul>
+  <li><b>Project page:</b> https://yakoubbazi.github.io/Roaya-VL/</li>
+  <li><b>Code:</b> https://github.com/yakoubbazi/Roaya-VL</li>
+  <li><b>Models:</b> internal for now (release plan will be announced)</li>
+</ul>
 
-## Roadmap
-- [x] Stage-2 instruction tuning to **~50K steps**
-- [x] Pick **best checkpoint (~45K)** based on Stage-2 validation trend
-- [ ] Expanded evaluation on additional benchmarks (InfoVQA, POPE, MMMU, MMStar, etc.)
-- [ ] **Stage-2.5 Arabic consolidation** (Arabic instruction + OCR/doc + culture)
-- [ ] Stage-3 **preference optimization** (DPO / ORPO / GRPO) when preference/reward data is ready
-- [ ] Teaser examples (OCR / Doc / VQA / multi-image)
-- [ ] Reproducibility checklist (scripts + configs)
-- [ ] Public release (weights + code + evaluation)
+<hr/>
 
----
+<h2>🗺️ Roadmap</h2>
+<ul>
+  <li>[x] Stage-2 SFT to ~50K steps</li>
+  <li>[x] Select best checkpoint (~45K)</li>
+  <li>[ ] Expand evaluation (MMStar, MMMU, POPE, RealWorldQA, etc.)</li>
+  <li>[ ] Stage-2.5 Arabic consolidation (ongoing)</li>
+  <li>[ ] Stage-3 preference optimization (DPO/ORPO/GRPO) when preference data is ready</li>
+  <li>[ ] Teaser demos (OCR / Doc / VQA / multi-image)</li>
+  <li>[ ] Reproducibility checklist (scripts + configs)</li>
+  <li>[ ] Public release (weights + evaluation)</li>
+</ul>
 
-## Acknowledgement
-- **LLaVA-NeXT**: the codebase we built upon for training/evaluation utilities and core VLM engineering components.  
-  https://github.com/LLaVA-VL/LLaVA-NeXT
+<hr/>
 
-- **DeepSeek-OCR**: the OCR-style, compression-first vision encoder inspiration we adopt/adapt for token-efficient visual tokenization in Roa’ya-VL.  
-  https://github.com/deepseek-ai/DeepSeek-OCR
+<h2>🙏 Acknowledgement</h2>
+<ul>
+  <li><b>LLaVA-NeXT</b> (training/evaluation utilities and engineering baseline)<br/>
+    https://github.com/LLaVA-VL/LLaVA-NeXT
+  </li>
+  <li><b>DeepSeek-OCR</b> (used in the current reference build; OCR-centric inspiration)<br/>
+    https://github.com/deepseek-ai/DeepSeek-OCR
+  </li>
+  <li><b>VLMEvalKit</b> (evaluation toolkit integration)<br/>
+    https://github.com/open-compass/VLMEvalKit
+  </li>
+</ul>
 
-- **VLMEvalKit**: the evaluation toolkit we used to integrate Roa’ya-VL and run standardized evaluations across multiple VLM benchmarks.  
-  https://github.com/open-compass/VLMEvalKit
+<blockquote>
+  Note: Roa’ya-VL is an independent project and is not affiliated with the above repositories.
+</blockquote>
 
-> **Note:** Roa’ya-VL is an independent research project and is not affiliated with LLaVA-NeXT, DeepSeek-OCR, or VLMEvalKit.
+<hr/>
 
----
-
-## Citation
-```bibtex
-@article{bazi2025roaya,
-  title   = {Roa'ya-VL-3B: Compression-First Visual Tokenization for Arabic-English VLMs},
+<h2>📌 Citation (project)</h2>
+<pre><code class="language-bibtex">
+@misc{roaya_vl_framework_2026,
+  title   = {Roa'ya-VL: A Practical Framework for Arabic--English Vision-Language Models},
   author  = {Bazi, Yakoub and Zuair, Mansour and Al Rahhal, Mohamad Mahmoud},
-  journal = {arXiv preprint arXiv:XXXX.XXXXX},
-  year    = {2026}
+  year    = {2026},
+  note    = {Project repository and technical notes (proof-of-concept)}
 }
+</code></pre>
