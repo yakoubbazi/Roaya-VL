@@ -79,7 +79,7 @@
 
 ---
 
-## What is Roa’ya-VL-3B?
+## What is Roa’ya-VL?
 We introduce Roa’ya-VL-3B, a bilingual Arabic–English vision–language model (VLM) aimed at practical Arabic–English visual understanding, with emphasis on reading and reasoning over text in images (OCR), document-style inputs, and general vision–language tasks such as VQA and grounded reasoning.
 
 Roa’ya-VL-3B follows a modular design (vision encoder + projector + LLM backbone). In the current reference version, we use:
