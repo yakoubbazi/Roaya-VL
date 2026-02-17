@@ -56,11 +56,6 @@
   <li><b>Stage-2.5 Arabic consolidation</b> is under active iteration (Arabic OCR/Doc + Arabic instruction + optional culture-focused content)</li>
 </ul>
 
-<blockquote>
-  <b>Key idea:</b> Roa’ya-VL is a <b>framework</b> (recipes + evaluation + best practices), not a claim about one fixed architecture.
-  The current reference build is one instantiation used to validate the pipeline end-to-end.
-</blockquote>
-
 <hr/>
 
 <h2>🎯 What Roa’ya-VL is</h2>
