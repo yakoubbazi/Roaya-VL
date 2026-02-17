@@ -57,8 +57,8 @@
 ---
 
 ## 📢 Latest Updates
-- **2026-01-21**: Added Stage-2 validation trajectory figure (**MMBench-EN / OCRBench / TextVQA / Avg**).
-- **2026-01-27**: Selected **best Stage-2 checkpoint (45K)** from the trajectory (trained up to **50K**).
+- **2026-02-17**: Added Stage-2 validation trajectory figure (**MMBench-EN / OCRBench / TextVQA / Avg**).
+- **2026-02-17**: Selected **best Stage-2 checkpoint (45K)** from the trajectory (trained up to **50K**).
 
 ---
 
