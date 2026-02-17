@@ -3,13 +3,13 @@
 </p>
 
 <p align="center" style="color:#4b5563; margin-top:-10px; font-size:18px; font-weight:800; line-height:1.7;">
-  مشروع رؤيا (PoC) — إطار عملي لبناء نماذج لغوية-بصرية عربي–إنجليزي لفهم الصور وقراءة النصوص داخلها (OCR) والاستدلال.
+  مشروع رؤيا — نموذج لغوي-بصري عربي–إنجليزي لفهم الصور وقراءة النصوص داخلها (OCR) والاستدلال.
   يهدف المشروع إلى توثيق أفضل الممارسات عبر مراحل تطوير نماذج VLM: المواءمة/ما قبل التدريب (عند الحاجة)، الضبط الخاضع للإشراف (SFT)،
   ثم التحسين اللاحق باستخدام أساليب التفضيل مثل DPO و GRPO.
 </p>
 
 <h1 align="center" style="font-size:40px; line-height:1.15; margin:10px 0 8px;">
-  Roa’ya-VL: A Practical Framework for Arabic–English Vision-Language Models
+  Roa’ya-VL: Arabic–English Vision-Language Model
 </h1>
 
 <p align="center" style="color:#6b7280; font-size:15px; margin-top:-4px; line-height:1.5;">
