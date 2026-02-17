@@ -13,10 +13,11 @@
 </h1>
 
 <p align="center" style="color:#6b7280; font-size:15px; margin-top:-4px; line-height:1.5;">
-  Not a single model — a modular recipe for building Arabic–English VLMs (OCR + Doc + VQA + Reasoning).
+  A modular recipe for building Arabic–English VLMs (OCR + Doc + VQA + Reasoning).
   <br/>
   Current reference build: DeepSeek-OCR–style vision encoder + projector + Qwen2.5-VL-3B backbone.
 </p>
+
 
 <p align="center">
   <b>Yakoub Bazi</b><sup>1</sup> ·
