@@ -145,7 +145,6 @@ Stage-2 checkpoint trajectory on representative benchmarks; best checkpoint (~45
 <h2>🧪 Evaluation</h2>
 <p>
 We run standardized evaluations via <b>VLMEvalKit</b> to track progress across checkpoints/stages.
-For Stage-2.5, we typically evaluate every <b>500–1000 steps</b> because improvements can appear gradually and differ by skill (OCR vs reasoning vs instruction following).
 </p>
 
 <hr/>
