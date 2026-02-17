@@ -80,23 +80,14 @@
 ---
 
 ## What is Roa’ya-VL-3B?
-We introduce **Roa’ya-VL-3B**, a bilingual **Arabic–English** vision–language model (VLM) built to evaluate whether **compression-first, OCR-style visual tokenization** can generalize beyond OCR to broader VLM tasks under a **fixed visual token budget**.
+We introduce Roa’ya-VL-3B, a bilingual Arabic–English vision–language model (VLM) designed to test whether compression-first, OCR-style visual tokenization can generalize beyond OCR to broader VLM tasks under a fixed visual-token budget.
 
-Roa’ya-VL-3B combines:
-- A **DeepSeek-OCR** visual encoder (compression-first tokenization; SAM & CLIP features)
-- A lightweight **projector**
-- A strong open backbone **Qwen2.5-VL-3B**
+Roa’ya-VL-3B is implemented as a modular stack. In the current reference version, we use:
+• Vision encoder: DeepSeek-OCR (compression-first tokenization; SAM & CLIP features) — used as a strong OCR-centric baseline and may be replaced in future releases
+• A lightweight projector
+• Backbone LLM: Qwen2.5-VL-3B
 
-The model supports token-efficient regimes (256/400 tokens) and document-scale tiling (up to 9×400 tokens). We study practical training stages (alignment → instruction tuning → Arabic consolidation → preference optimization) and provide transparent intermediate validation to understand how **data mixture**, **tokenization**, and **Arabic-focused consolidation** affect OCR fidelity, reasoning, and Arabic visual understanding.
-
----
-
-## Tokenization regimes
-- **Tiny:** 520×520 → **96** visual tokens  
-- **Small:** 680×680 → **100** visual tokens  
-- **Base:** 1024×1024 → **256** visual tokens  
-- **Large:** 1280×1280 → **400** visual tokens  
-- **Tiling:** up to **9×400** tokens for document-scale inputs / multi-image  
+The model supports token-efficient regimes (e.g., 256/400 visual tokens) and document-scale tiling (up to 9×400 tokens). We structure development in stages (alignment → instruction tuning → Arabic consolidation → preference optimization) and report intermediate validation to understand how data mixture, tokenization, and Arabic-focused consolidation affect OCR fidelity, reasoning, and Arabic visual understanding.
 
 ---
 
