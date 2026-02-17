@@ -128,7 +128,7 @@ The model supports token-efficient regimes (e.g., 256/400 visual tokens) and doc
 ## Citation
 ```bibtex
 @article{bazi2025roaya,
-  title   = {Roa'ya-VL-3B: Compression-First Visual Tokenization for Arabic-English VLMs},
+  title   = {Roa'ya-VL:  Roa’ya-VL: Arabic–English VLM Model },
   author  = {Bazi, Yakoub and Zuair, Mansour and Al Rahhal, Mohamad Mahmoud},
   journal = {arXiv preprint arXiv:XXXX.XXXXX},
   year    = {2026}
