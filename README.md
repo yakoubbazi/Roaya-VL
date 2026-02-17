@@ -80,14 +80,14 @@
 ---
 
 ## What is Roa’ya-VL-3B?
-We introduce Roa’ya-VL-3B, a bilingual Arabic–English vision–language model (VLM) designed to test whether compression-first, OCR-style visual tokenization can generalize beyond OCR to broader VLM tasks under a fixed visual-token budget.
+We introduce Roa’ya-VL-3B, a bilingual Arabic–English vision–language model (VLM) aimed at practical Arabic–English visual understanding, with emphasis on reading and reasoning over text in images (OCR), document-style inputs, and general vision–language tasks such as VQA and grounded reasoning.
 
-Roa’ya-VL-3B is implemented as a modular stack. In the current reference version, we use:
-• Vision encoder: DeepSeek-OCR (compression-first tokenization; SAM & CLIP features) — used as a strong OCR-centric baseline and may be replaced in future releases
+Roa’ya-VL-3B follows a modular design (vision encoder + projector + LLM backbone). In the current reference version, we use:
+• Vision encoder: DeepSeek-OCR (OCR-centric, compression-first tokenization; SAM & CLIP features) as a strong baseline choice, with the design kept open to switching the vision tower in future versions
 • A lightweight projector
 • Backbone LLM: Qwen2.5-VL-3B
 
-The model supports token-efficient regimes (e.g., 256/400 visual tokens) and document-scale tiling (up to 9×400 tokens). We structure development in stages (alignment → instruction tuning → Arabic consolidation → preference optimization) and report intermediate validation to understand how data mixture, tokenization, and Arabic-focused consolidation affect OCR fidelity, reasoning, and Arabic visual understanding.
+The model supports token-efficient regimes (e.g., 256/400 visual tokens) and document-scale tiling (up to 9×400 tokens) for long or dense pages. We structure development in stages (alignment → instruction tuning → Arabic consolidation → preference optimization) and track intermediate validation to understand how data mixture and Arabic-focused consolidation affect OCR fidelity, document understanding, reasoning, and bilingual instruction-following.
 
 ---
 
