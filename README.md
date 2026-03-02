@@ -33,7 +33,7 @@
 
 <p align="center">
   <a href="#" target="_blank">
-    <img alt="Paper" src="https://img.shields.io/badge/Paper-soon-6c757d?style=for-the-badge">
+    <img alt="Technical Report" src="https://img.shields.io/badge/Paper-soon-6c757d?style=for-the-badge">
   </a>
   <a href="https://yakoubbazi.github.io/Roaya-VL/" target="_blank">
     <img alt="Project Page" src="https://img.shields.io/badge/Project-Page-2563eb?style=for-the-badge">
