@@ -5,9 +5,9 @@
 </p>
 
 <p align="center" style="color:#4b5563; margin-top:-10px; font-size:20px; font-weight:800;">
- مشروع رؤيا — نموذج لغوي-بصري عربي–إنجليزي لفهم الصور وقراءة النصوص (OCR) والاستدلال.
-  يهدف المشروع إلى توثيق أفضل الممارسات عبر مراحل بناء نماذج VLM: ما قبل التدريب/المحاذاة، الضبط الخاضع للإشراف (SFT)،
-  ثم تحسين التفضيلات (DPO/ORPO/GRPO) أو التعلم التعزيزي</p>
+ مشروع رؤيا — نموذج لغوي-بصري عربي–إنجليزي لفهم الصور وقراءة النصوص (OCR). 
+  يهدف المشروع إلى توثيق أفضل الممارسات عبر مراحل بناء نماذج VLM: ما قبل التدريب , الضبط الخاضع للإشراف (SFT)،
+  ثم التعلم التعزيزي (DPO/GRPO) </p>
 
 <h1 align="center" style="font-size:42px; line-height:1.15; margin:10px 0 8px;">
    Roa'ya-VL-3B (رؤيا): Best Practices for Building Bilingual Arabic-English Vision-Language Models 
