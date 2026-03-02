@@ -10,7 +10,7 @@
   ثم تحسين التفضيلات (DPO/ORPO/GRPO) أو التعلم التعزيزي</p>
 
 <h1 align="center" style="font-size:42px; line-height:1.15; margin:10px 0 8px;">
-  Roa’ya-VL: Arabic–English VLM Model
+   Roa'ya-VL-3B (رؤيا): Best Practices for Building Bilingual Arabic-English Vision-Language Models 
 </h1>
 
 <p align="center">
