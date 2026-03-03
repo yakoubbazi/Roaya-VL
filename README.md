@@ -110,10 +110,11 @@ The model supports token-efficient regimes (e.g., 256/400 visual tokens) and doc
 - [ ] Public release (weights + code + evaluation)
 
 ---
+
 ## 🚀 Quickstart (Clone + Install + Run a Demo)
 
 1) Clone the repository
-```bash
+
 git clone https://github.com/yakoubbazi/Roaya-VL.git
 cd Roaya-VL
 conda create -n roaya python=3.10 -y
@@ -121,19 +122,19 @@ conda activate roaya
 pip install -r requirements.txt
 
 2) Download the model from Hugging Face
-```bash
+
 pip install -U huggingface_hub
 huggingface-cli login
 huggingface-cli download BigData-KSU/Roaya-VL-3B --local-dir ./checkpoints/Roaya-VL-3B
 
 3) Run Demo
-```bash
 python Infer.py \
   --model_path ./checkpoints/Roaya-VL-3B \
   --image examples/Train_Pipeline.png \
   --prompt "Describe the training pipeline or RoayaVL."
 
 ---
+
 
 ## Acknowledgement
 - **LLaVA-NeXT**: the codebase we built upon for training/evaluation utilities and core VLM engineering components.  
