@@ -99,6 +99,16 @@ The model supports token-efficient regimes (e.g., 256/400 visual tokens) and doc
 
 ---
 
+## 🚀 Quickstart (Clone + Install + Run a Demo)
+### 1) Clone the repository
+```bash
+git clone https://github.com/yakoubbazi/Roaya-VL.git
+cd Roaya-VL
+conda create -n roaya python=3.10 -y
+conda activate roaya
+pip install -r requirements.txt
+
+
 ## Roadmap
 - [x] Stage-2 instruction tuning to **~50K steps**
 - [x] Pick **best checkpoint (~45K)** based on Stage-2 validation trend
