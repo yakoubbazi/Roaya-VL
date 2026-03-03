@@ -32,17 +32,18 @@
 
 <p align="center">
   <a href="#" target="_blank">
+    <img alt="Models" src="https://img.shields.io/badge/HuggingFace-f59e0b?style=for-the-badge">
+  </a>
+    <a href="https://github.com/yakoubbazi/Roaya-VL" target="_blank">
+    <img alt="Code" src="https://img.shields.io/badge/Code-GitHub-111827?style=for-the-badge">
+  </a>
+  <a href="#" target="_blank">
     <img alt="Technical Report" src="https://img.shields.io/badge/Paper-soon-6c757d?style=for-the-badge">
   </a>
   <a href="https://yakoubbazi.github.io/Roaya-VL/" target="_blank">
     <img alt="Project Page" src="https://img.shields.io/badge/Project-Page-2563eb?style=for-the-badge">
   </a>
-  <a href="https://github.com/yakoubbazi/Roaya-VL" target="_blank">
-    <img alt="Code" src="https://img.shields.io/badge/Code-GitHub-111827?style=for-the-badge">
-  </a>
-  <a href="#" target="_blank">
-    <img alt="Models" src="https://img.shields.io/badge/HuggingFace-soon-f59e0b?style=for-the-badge">
-  </a>
+ 
 </p>
 
 ---
