@@ -59,6 +59,7 @@
 ## 📢 Latest Updates
 - **2026-03-04**: Released **Roa’ya-VL-3B Stage-2 checkpoint (45K)** on Hugging Face.
 - **2026-03-04**: Added **initial benchmark evaluation results** across multiple VLM benchmarks.
+- **2026-03-04**: Added **example inference demo** for bilingual (Arabic–English) image understanding.
 - **2026-02-17**: Added Stage-2 validation trajectory figure (**MMBench-EN / OCRBench / TextVQA / Avg**).
 - **2026-02-17**: Selected **best Stage-2 checkpoint (45K)** from the trajectory (trained up to **50K**).
 ---
@@ -132,6 +133,11 @@ huggingface-cli download BigData-KSU/Roaya-VL-3B --local-dir ./checkpoints/Roaya
 
 **3) Run Demo**
 ```bash
+python Infer.py \
+  --model_path ./checkpoints/Roaya-VL-3B \
+  --image examples/Train_Pipeline.png \
+  --prompt "صف مخطط تدريب نموذج Roaya-VL الظاهر في الصورة."
+
 python Infer.py \
   --model_path ./checkpoints/Roaya-VL-3B \
   --image examples/Train_Pipeline.png \
