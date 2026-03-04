@@ -136,7 +136,7 @@ huggingface-cli download BigData-KSU/Roaya-VL-3B --local-dir ./checkpoints/Roaya
 python Infer.py \
   --model_path ./checkpoints/Roaya-VL-3B \
   --image examples/Train_Pipeline.png \
-  --prompt "صف مخطط تدريب نموذج Roaya-VL الظاهر في الصورة."
+  --prompt "صف مخطط تدريب النموذج الظاهر في الصورة"
 
 python Infer.py \
   --model_path ./checkpoints/Roaya-VL-3B \
