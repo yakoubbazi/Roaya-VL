@@ -1,11 +1,11 @@
 # llava/model/multimodal_encoder/builder.py
 # import os   # <-- ADD THIS LINE
-from .clip_encoder import CLIPVisionTower, CLIPVisionTowerS2
-from .imagebind import ImageBindWrapper
-from .open_clip_encoder import OpenCLIPVisionTower
-from .hf_vision import HFVisionTower
-from .siglip_encoder import SigLipVisionTower
-from .mlcd_encoder import MLCDVisionTower, MLCDVisionTowerS2
+#from .clip_encoder import CLIPVisionTower, CLIPVisionTowerS2
+#from .imagebind import ImageBindWrapper
+#from .open_clip_encoder import OpenCLIPVisionTower
+#from .hf_vision import HFVisionTower
+#from .siglip_encoder import SigLipVisionTower
+#from .mlcd_encoder import MLCDVisionTower, MLCDVisionTowerS2
 
 # ✅ correct import
 # from .vision_tower_deepseekocr_official import DeepSeekOCRVisionTower
