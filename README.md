@@ -57,7 +57,6 @@
 ---
 
 ## 📢 Latest Updates
-## 📢 Latest Updates
 - **2026-03-04**: Released **Roa’ya-VL-3B Stage-2 checkpoint (45K)** on Hugging Face.
 - **2026-03-04**: Added **initial benchmark evaluation results** across multiple VLM benchmarks.
 - **2026-02-17**: Added Stage-2 validation trajectory figure (**MMBench-EN / OCRBench / TextVQA / Avg**).
