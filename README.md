@@ -31,9 +31,9 @@
 </p>
 
 <p align="center">
-  <a href="#" target="_blank">
-    <img alt="Models" src="https://img.shields.io/badge/HuggingFace-f59e0b?style=for-the-badge">
-  </a>
+<a href="https://huggingface.co/BigData-KSU/Roaya-VL-3B" target="_blank">
+  <img alt="Hugging Face" src="https://img.shields.io/badge/Models-HuggingFace-yellow?style=for-the-badge&logo=huggingface&logoColor=black">
+</a>
     <a href="https://github.com/yakoubbazi/Roaya-VL" target="_blank">
     <img alt="Code" src="https://img.shields.io/badge/Code-GitHub-111827?style=for-the-badge">
   </a>
@@ -94,15 +94,15 @@ The model supports token-efficient regimes (e.g., 256/400 visual tokens) and doc
 ## Resources
 - **Project page:** https://yakoubbazi.github.io/Roaya-VL/
 - **Code:** https://github.com/yakoubbazi/Roaya-VL
+- **Models:** [soon](https://huggingface.co/BigData-KSU/Roaya-VL-3B)
 - **Paper:** soon
-- **Models:** soon
 
 ---
 
 ## Roadmap
 - [x] Stage-2 instruction tuning to **~50K steps**
 - [x] Pick **best checkpoint (~45K)** based on Stage-2 validation trend
-- [ ] Expanded evaluation on additional benchmarks (InfoVQA, POPE, MMMU, MMStar, etc.)
+- [x] Expanded evaluation on additional benchmarks (InfoVQA, POPE, MMMU, MMStar, etc.)
 - [ ] **Stage-2.5 Arabic consolidation** (Arabic instruction + OCR/doc + culture)
 - [ ] Stage-3 **preference optimization** (DPO / ORPO / GRPO) when preference/reward data is ready
 - [ ] Teaser examples (OCR / Doc / VQA / multi-image)
