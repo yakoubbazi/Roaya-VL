@@ -68,7 +68,7 @@
 <p align="center">
   <img src="docs/assets/Train_Pipeline.png" width="900" alt="Roa'ya-VL training pipeline (Stage 2)">
 </p>
-<p align="center"><i>Stage-2 instruction tuning: DeepSeek-OCR–inspired compression-first visual tokenization + projector + Qwen2.5-VL-3B backbone, trained on a FineVision mix with Arabic.</i></p>
+<p align="center"><i>Stage-2 instruction tuning: DeepSeek-OCR–inspired compression-first visual tokenization + projector + Qwen2.5-VL-3B backbone, trained on a FineVision mix with Arabic (~18M images).</i></p>
 
 ---
 
@@ -106,7 +106,7 @@ The model supports token-efficient regimes (e.g., 256/400 visual tokens) and doc
 - [x] Pick **best checkpoint (~45K)** based on Stage-2 validation trend
 - [x] Expanded evaluation on additional benchmarks (InfoVQA, POPE, MMMU, MMStar, etc.)
 - [ ] **Stage-2.5 Arabic consolidation** (Arabic instruction + OCR/doc + culture)
-- [ ] Stage-3 **preference optimization** (DPO / ORPO / GRPO) when preference/reward data is ready
+- [ ] Stage-3 **preference optimization** (DPO /GRPO) when preference/reward data is ready
 - [ ] Teaser examples (OCR / Doc / VQA / multi-image)
 - [ ] Reproducibility checklist (scripts + configs)
 - [ ] Public release (weights + code + evaluation)
