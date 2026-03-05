@@ -9,7 +9,7 @@
 </p>
 
 <h1 align="center" style="font-size:42px; line-height:1.15; margin:10px 0 8px;">
-   Roa'ya-VL (رؤيا): Towards Effective Bilingual Arabic-English Vision-Language Understanding 
+   Roa'ya-VL (رؤيا): A Bilingual Arabic–English Vision-Language Model for Multimodal Understanding
 </h1>
 
 <p align="center">
@@ -163,7 +163,7 @@ python Infer.py \
 ## Citation
 ```bibtex
 @article{bazi2025roaya,
-  title   = {Roa'ya-VL (رؤيا): Towards Effective Bilingual Arabic-English Vision-Language Understanding},
+  title   = {Roa'ya-VL (رؤيا): A Bilingual Arabic–English Vision-Language Model for Multimodal Understanding},
   author  = {Bazi, Yakoub and Zuair, Mansour and Al Rahhal, Mohamad Mahmoud},
   journal = {arXiv preprint arXiv:XXXX.XXXXX},
   year    = {2026}
