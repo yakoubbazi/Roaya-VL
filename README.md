@@ -96,7 +96,7 @@ The model supports token-efficient regimes (e.g., 256/400 visual tokens) and doc
 ## Resources
 - **Project page:** https://yakoubbazi.github.io/Roaya-VL/
 - **Code:** https://github.com/yakoubbazi/Roaya-VL
-- **Models:** [soon](https://huggingface.co/BigData-KSU/Roaya-VL-3B)
+- **Models:** https://huggingface.co/BigData-KSU/Roaya-VL-3B
 - **Paper:** soon
 
 ---
